@@ -1,18 +1,19 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-import { AppRoutingModule } from './app-routing.module';
+import Backendless from 'backendless';
+import { environment } from '../environments/environment';
 import { AppComponent } from './app.component';
+Backendless.initApp(environment.backendless.APP_ID, environment.backendless.API_KEY);
 
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule
+    BrowserModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
